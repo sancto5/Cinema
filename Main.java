@@ -27,11 +27,13 @@ public class Main {
         for (Sessao sessao : sessoes) {
             Filme filme = sessao.getFilme();
             String titulo = filme.getTitulo();
+            String diretor = filme.getDiretor();
             int anoLancamento = filme.getAnoLancamento();
             double classificacao = (filme instanceof FilmeAvaliado) ? ((FilmeAvaliado) filme).getClassificacao(): 0.0;
 
             System.out.println("Filme: " + sessao.getFilme().getTitulo());
             System.out.println("Ano de Lançamento: " + anoLancamento);
+            System.out.println("Diretor: " + diretor);
             if (classificacao > 0) {
                 System.out.println("Avaliação do Público: " + classificacao);
             }
